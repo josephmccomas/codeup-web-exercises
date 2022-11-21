@@ -25,7 +25,7 @@ function loginInfo() {
   
   // neither the username or password can start or end with whitespace
 
-  if ((username(0) == " ") || (password(0) == " ")) {
+  if ((username[0] == " ") || (password[0] == " ")) {
     return false;
   }
 }  
