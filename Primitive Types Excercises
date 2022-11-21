@@ -20,7 +20,7 @@ function loginInfo() {
   // the username must be no more than 20 characters
 
   if (username.length < 20) {
-    return false";
+    return false;
   }
   
   // neither the username or password can start or end with whitespace
@@ -30,5 +30,6 @@ function loginInfo() {
   }
 }  
 
-++++++++++++++
+// ++++++++++++++
 
+//
