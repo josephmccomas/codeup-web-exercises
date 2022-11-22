@@ -1,7 +1,7 @@
 // Create a variable that holds a boolean value for each of the following conditions:
 
-
-
+//
+//
 function login() {
     let username = 'codeup';
     let password = 'notastrongpassword';
@@ -25,3 +25,14 @@ function login() {
 }
 
 // ++++++++++++++
+
+let username = 'codeup';
+let password = 'notastrongpassword';
+// the password must be at least 5 characters
+
+// the password must not include the username
+
+// the username must be no more than 20 characters
+
+// neither the username or password can start or end with whitespace
+
