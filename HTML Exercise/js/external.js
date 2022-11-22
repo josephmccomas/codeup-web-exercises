@@ -20,7 +20,7 @@ to ask the user for that number.
 - Finally, commit the changes to your git repository, and push to GitHub.
 */
 
-var littleMermaid = Number(prompt(`Days The Little Mermaid will be rented`));
-var brotherBear = Number(prompt(`Days Brother Bear will be rented`));
-var hercules = Number(prompt(`Days Hercules will be rented`));
+let littleMermaid = Number(prompt(`Days The Little Mermaid will be rented`));
+let brotherBear = Number(prompt(`Days Brother Bear will be rented`));
+let hercules = Number(prompt(`Days Hercules will be rented`));
 alert(`$ ${(littleMermaid + brotherBear + hercules) * 3} is the rental total`);
