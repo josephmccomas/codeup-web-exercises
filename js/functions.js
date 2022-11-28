@@ -9,13 +9,12 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 
-// function name() {
-//     let userNameInput = prompt("Enter your name");
-//     return alert(`Hello, ${userNameInput}!`);
+// function sayHello(name) {
+//     return "Hello " + name + "!";
 // }
-// name();
 
-/*
+
+/**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
  * Store the result of the function call in a variable named 'helloMessage'.
@@ -27,6 +26,9 @@
 //     var helloMessage = "Joseph";
 //     console.log(helloMessage);
 // }) ();
+
+// let helloMessage = sayHello("Joseph");
+// console.log(helloMessage);
 
 /**
  * TODO:
@@ -41,8 +43,14 @@
 // };
 // console.log(myName);
 
-// Don't modify the following line, it generates a random number between 1 and 3
-// and stores it in a variable named random
+// let myName = "Joseph";
+// helloMessage = sayHello(myName);
+// console.log(helloMessage);
+
+/** Don't modify the following line, it generates a random number between 1 and 3
+* and stores it in a variable named random
+ * */
+
 var random = Math.floor((Math.random() * 3) + 1);
 
 /**
@@ -68,6 +76,18 @@ var random = Math.floor((Math.random() * 3) + 1);
 // }
 // isTwo(random);
 // console.log(isTwo == 2);
+
+// function isTwo(aNumber) {
+//     return aNumber === 2;
+// }
+//
+// console.log(isTwo(aNumber: 1));
+// console.log(isTwo(aNumber: 2));
+// console.log(isTwo(aNumber: 3));
+//
+// console.log(random);
+// let result = isTwo(random);
+// console.log(result);
 
 /**
  * TODO:
@@ -132,3 +152,10 @@ var random = Math.floor((Math.random() * 3) + 1);
 // var y = 0.12;
 // applyDiscount(x, y);
 // console.log(applyDiscount())
+
+function applyDiscount(price, discount) {
+    const discountAmount = price * discount;
+    return price - discountAmount;
+}
+
+console.log(applyDiscount(100, .2))
