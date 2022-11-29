@@ -29,8 +29,8 @@ These lines create two variables for you:
                  will contain a different color every time the page loads)
  */
 
-var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-var randomColor = colors[Math.floor(Math.random() * colors.length)];
+// var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+// var randomColor = colors[Math.floor(Math.random() * colors.length)];
 
 // function analyzeColor(colors) {
 //     if (colors === "red") {
@@ -142,24 +142,26 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * return value.
  */
 
-const luckyNumber = prompt("Enter your lucky number from 0 - 5")
-const price = prompt("Enter item price")
-function calculateTotal() {
-    if (luckyNumber === 0) {
-        return alert(price);
-    } else if (luckyNumber === 1) {
-        alert(price * 0.1);
-    } else if (luckyNumber === 2) {
-        alert(price * 0.2);
-    } else if (luckyNumber === 3) {
-        alert(price * 0.35);
-    } else if (luckyNumber === 4) {
-        alert(price * 0.5);
-    } else if (luckyNumber === 5) {
-        alert(0);
-    }
-}
-calculateTotal(luckyNumber, price);
+// const luckyNumber = Math.floor(Math.random() * 6) + 1;
+// const price = 100;
+//
+// function calculateTotal() {
+//
+//     if (luckyNumber == 0) {
+//         alert(`The final price is: ${price}`);
+//     } else if (luckyNumber == 1) {
+//         alert(`The final price is: ${price * 0.1}`);
+//     } else if (luckyNumber == 2) {
+//         alert(`The final price is: ${price * 0.2}`);
+//     } else if (luckyNumber == 3) {
+//         alert(`The final price is: ${price * 0.35}`);
+//     } else if (luckyNumber == 4) {
+//         alert(`The final price is: ${price * 0.5}`);
+//     } else if (luckyNumber == 5) {
+//         alert(`0`);
+//     }
+// }
+// calculateTotal(luckyNumber, price);
 
 /**
  * TODO:
@@ -168,10 +170,28 @@ calculateTotal(luckyNumber, price);
  * Prompt the user for their total bill, then use your `calculateTotal` function
  * and alerts to display to the user what their lucky number was, what their
  * price before the discount was, and what their price after the discount is.
- */
-// Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+   Generate a random number between 0 and 6]
+*/
 
+// var luckyNumber = Math.floor(Math.random() * 6);
+// var totalBill = prompt(`What was the bill?`);
+//
+// function discountPrice() {
+//     if (luckyNumber == 0) {
+//         alert(totalBill);
+//     } else if (luckyNumber == 1) {
+//         alert(totalBill * .1);
+//     } else if (luckyNumber == 2) {
+//         alert(totalBill * .2);
+//     } else if (luckyNumber == 3) {
+//         alert(totalBill * .3);
+//     } else if (luckyNumber == 4) {
+//         alert(totalBill * .4);
+//     } else if (luckyNumber == 5) {
+//         alert(totalBill * .5);
+//     }
+// }
+// discountPrice(luckyNumber, totalBill)
 
 
 /**
@@ -193,3 +213,26 @@ calculateTotal(luckyNumber, price);
  * HINT: The way we prompt for a value could be improved
  */
 
+// uses a `confirm` dialog to ask the user if they would like to enter a number
+
+// var userEntry = "";
+// function numberConfirmation() {
+//         if (confirm("Would you like to enter a number?")) {
+//         userEntry = prompt("Enter your number below");
+//     }
+//     if (isNaN(userEntry)) {
+//         alert("Incorrect data type");
+//     }
+//     alert(`Your number plus 100 is: ${+userEntry + 100}`);
+//     if (+userEntry % 2 == 0) {
+//         alert("Your number is even");
+//     } else if (+userEntry % 2 == 1) {
+//         alert("Your number is odd");
+//     }
+//     if (+userEntry < 0) {
+//         alert("Your number is negative");
+//     } else if (+userEntry > 0) {
+//         alert("Your number is positive")
+//     }
+// }
+// numberConfirmation(userEntry);
