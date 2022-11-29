@@ -1,3 +1,4 @@
+"use strict"
 // console.log("Hello from external Javascript");
 
 /**Use the alert function to show a message that says 'Welcome to my Website!'.*/
