@@ -142,26 +142,24 @@ These lines create two variables for you:
  * return value.
  */
 
-// const luckyNumber = Math.floor(Math.random() * 6) + 1;
-// const price = 100;
-//
-// function calculateTotal() {
-//
-//     if (luckyNumber == 0) {
-//         alert(`The final price is: ${price}`);
-//     } else if (luckyNumber == 1) {
-//         alert(`The final price is: ${price * 0.1}`);
-//     } else if (luckyNumber == 2) {
-//         alert(`The final price is: ${price * 0.2}`);
-//     } else if (luckyNumber == 3) {
-//         alert(`The final price is: ${price * 0.35}`);
-//     } else if (luckyNumber == 4) {
-//         alert(`The final price is: ${price * 0.5}`);
-//     } else if (luckyNumber == 5) {
-//         alert(`0`);
-//     }
-// }
-// calculateTotal(luckyNumber, price);
+const luckyNumber = Math.floor(Math.random() * 6) + 1;
+const price = 100;
+function calculateTotal() {
+    if (luckyNumber == 0) {
+        alert(`The final price is: ${price}`);
+    } else if (luckyNumber == 1) {
+        alert(`The final price is: ${price - (price *= 0.1)}`);
+    } else if (luckyNumber == 2) {
+        alert(`The final price is: ${price - (price *= 0.2)}`);
+    } else if (luckyNumber == 3) {
+        alert(`The final price is: ${price - (price *= 0.35)}`);
+    } else if (luckyNumber == 4) {
+        alert(`The final price is: ${price - (price *= 0.5)}`);
+    } else if (luckyNumber == 5) {
+        alert(`0`);
+    }
+}
+calculateTotal(luckyNumber, price);
 
 /**
  * TODO:
