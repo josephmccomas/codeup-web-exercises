@@ -33,10 +33,18 @@ randomOddOrEven(7);
 
 // Create a for loop that uses console.log to create the output shown below.
 
-function pyramid(x) {
-
+function generatePyramid() {
+    var totalNumberofRows = 9;
+    var output = '';
+    for (var i = 1; i <= totalNumberofRows; i++) {
+        for (var j = 1; j <= i; j++) {
+            output += j + '  ';
+        }
+        console.log(output);
+        output = '';
+    }
 }
-pyramid(1)
+generatePyramid();
 
 // Create a for loop that uses console.log to create the output shown below.
 
