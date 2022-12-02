@@ -22,9 +22,16 @@ fruits.forEach(printFruit);
  *
  */
 
-console.log("------------------------");
-let i = 1;
+//+++++++++++++++++++++let i = 1;
 for (const fruit of fruits) {
     console.log(i + ". " + fruit);
     i++;
 }
+
+//+++++++++++++++++++++  Remove Array Elements
+
+while(array.indexOf(valueForRemove) !== -1) {
+    array.splice(array.indexOf(valueForRemove), 1)
+}
+
+//+++++++++++++++++++++
