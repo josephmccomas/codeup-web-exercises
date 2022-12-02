@@ -65,22 +65,21 @@ var names = ["John", "Frank", "Paul", "Mike"];
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
-    const arr1 = [1, 2, 3, 4, 5];
-    const arr2 = [1, 2, 3, 4, 5];
-    const arr3 = [1, 2, 3, 4, 5];
 
-    function first() {
-        console.log(arr1[0]);
+    const arr = [1, 2, 3, 4, 5];
+    function first(arr) {
+        return arr[0];
     }
 
-    function second() {
-        console.log(arr2[1]);
+    function second(arr) {
+        return arr[1];
     }
 
-    function last() {
-        console.log(arr3.length);
+    function last(arr) {
+        return arr[arr.length -1];
     }
-first(arr1);
-second(arr2);
-last(arr3);
+    console.log(first(arr));
+    console.log(second(arr));
+    console.log(last(arr));
+
 })();
