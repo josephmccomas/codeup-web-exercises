@@ -8,6 +8,7 @@
  * here. If you do, the automated tests will not be able to see your functions.
  */
 
+/**Define a function named isGreaterThan that takes in two values and returns a true if the first argument is greater than the second argument otherwise it should return false. If either argument is not a number, return false*/
 function isGreaterThan( param1, param2 ) {
     if (param1 === null || param2 === null) return false;
     if (isNaN(param1) || isNaN(param2)) return false;
