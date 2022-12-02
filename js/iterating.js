@@ -8,7 +8,8 @@
      */
 
 var names = ["John", "Frank", "Paul", "Mike"];
-    console.log("1 ------------------")
+    console.log(names);
+    console.log("------------------")
 
     /**
      * TODO:
@@ -16,8 +17,8 @@ var names = ["John", "Frank", "Paul", "Mike"];
      * array.
      */
 
-    console.log(names);
-    console.log("2 ------------------")
+    console.log(names.length);
+    console.log("------------------")
 
     /**
      * TODO:
@@ -29,7 +30,7 @@ var names = ["John", "Frank", "Paul", "Mike"];
     console.log(names[1]);
     console.log(names[2]);
     console.log(names[3]);
-    console.log("3 ------------------")
+    console.log("------------------")
     /**
      * TODO:
      * Write some code that uses a for loop to log every item in the names
@@ -39,7 +40,7 @@ var names = ["John", "Frank", "Paul", "Mike"];
     for (let i = 0; i < names.length; i++) {
         console.log(names[i]);
     }
-    console.log("4 ------------------")
+    console.log("------------------")
 
     /**
      * TODO:
@@ -49,7 +50,7 @@ var names = ["John", "Frank", "Paul", "Mike"];
     names.forEach(function (name) {
         console.log(name);
     });
-    console.log("5 ------------------")
+    console.log("------------------")
 
     /**
      * TODO:
