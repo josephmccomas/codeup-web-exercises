@@ -1,11 +1,14 @@
 "use strict"
 
+const pets = [[{name: 'Trooper', type: 'dog'}], [{name: 'shadow', type: 'dog'}], [{name: 'Lilly', type: 'dog'}]];
 
 
-function removeElem() {
-    let anArray = [1, 2, 3, 4, 5];
-    while(anArray.indexOf(2) !== -1) {
-        anArray.splice(anArray.indexOf(2), 1)
+function list() {
+    // let result = "";
+    for (name in pets) {
+        // result += pets[name];
+        console.log(`${name}`);
     }
+    // return result;
 }
-console.log(removeElem());
+list(pets);

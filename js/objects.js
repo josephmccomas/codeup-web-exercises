@@ -12,6 +12,8 @@
      *  > console.log(person.lastName) // "Sanchez"
      */
 
+    const person = {firstName: 'Rick', lastName: 'Sanchez'};
+
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -21,6 +23,9 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
+
+    person.sayHello = `Hello from ${person.firstName} ${person.lastName}`;
+    console.log(person.sayHello);
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -36,11 +41,22 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+        const shoppers = [
+            {name: 'Cameron', amount: 180},
+            {name: 'Ryan', amount: 250},
+            {name: 'George', amount: 320}
+        ];
+
+        shoppers.forEach((amount, name) => {
+        if (amount > 200) {
+            console.log([name, amount]);
+        }
+    });
+
+
+
+
+
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
