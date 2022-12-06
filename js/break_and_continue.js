@@ -7,7 +7,7 @@ function oddNumEntry() {
     let randomNumber = Math.floor(Math.random() * (maximumNumber * minimumNumber +1) + minimumNumber);
     for () {
 
-        if (isNaN(userInput)) {
+        if (Number.isSafeInteger(userInput) !== true) {
             alert("Your number is not odd, try again");
             continue;
         }

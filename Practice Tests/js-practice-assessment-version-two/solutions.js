@@ -107,7 +107,7 @@ function findLongestString(param1, param2) {
 function isFactor(param1, param2) {
     if (param1 === null || param2 === null) return false;
     // if (isNaN(param1) || isNaN(param2)) return false;
-    if (typeof +param1 !== "number" || typeof +param2 !== "number") return false;
+    if (Number.isSafeInteger(param1) !== true || Number.isSafeInteger(param2) !== true) return false;
     if (param1 === 0) return false;
     if (param2 % param1 === 0) return true;
         return false;
