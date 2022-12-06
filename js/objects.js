@@ -12,7 +12,7 @@
      *  > console.log(person.lastName) // "Sanchez"
      */
 
-    const person = {firstName: 'Rick', lastName: 'Sanchez'};
+    // const person = {firstName: 'Rick', lastName: 'Sanchez'};
 
     /**
      * TODO:
@@ -24,8 +24,8 @@
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 
-    person.sayHello = `Hello from ${person.firstName} ${person.lastName}`;
-    console.log(person.sayHello);
+    // person.sayHello = `Hello from ${this.firstName} ${this.lastName}`;
+    // console.log(person.sayHello);
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -41,17 +41,21 @@
      * and console.log the relevant messages for each person
      */
 
-        const shoppers = [
-            {name: 'Cameron', amount: 180},
-            {name: 'Ryan', amount: 250},
-            {name: 'George', amount: 320}
-        ];
+        // const shoppers = [
+        //     {name: 'Cameron', amount: 180},
+        //     {name: 'Ryan', amount: 250},
+        //     {name: 'George', amount: 320}
+        // ];
+        //
+        // shoppers.forEach(function(shopper, index) {
+        //     let discount = 0;
+        //     if (shopper.amount > 200) {
+        //         discount = .12;
+        //     }
+        //     let finalAmount = shopper.amount - (shopper.amount * discount);
+        //     console.log(`${shopper.name} ${shopper.amount} ${discount} ${finalAmount}`);
+        // });
 
-        shoppers.forEach((amount, name) => {
-        if (amount > 200) {
-            console.log([name, amount]);
-        }
-    });
 
 
 
@@ -70,7 +74,13 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
-
+    // let books = {
+    //     title: "1",
+    //     author: {
+    //         firstName: "a",
+    //         lastName: "b",
+    //     }
+    // }
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -95,7 +105,13 @@
      *      ---
      *      ...
      */
-
+    // let index = 1;
+    // for (const book of books) {
+    //     console.log(`
+    //     Book #: ${books.indexOf(book) + 1}
+    //     Title: ${title}
+    //     Author: ${books.author.firstName} ${books.author.lastName} ---`);
+    // }
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -106,5 +122,31 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+    function createBook(title, fName, lName) {
+        let book = {
+            title: title,
+            author: {
+                firstName: fName,
+                lastName: lName
+            }
+        }
+        // Add a showBookInfo function to each book
+        book.showBookInfo = function () {
+            console.log(`
+            Book #: ${index + 1}
+            Title: ${this.title}
+            Author: ${books.author.firstName} ${books.author.lastName} ---`);
+        }
+        return book;
+    }
+    let books = [];
+    books.push(createBook("The Cycle of Arawn", "Edward", "Robertson"))
+    books.push(createBook("Dune", "Frank", "Herbert"))
+    console.log(books);
 
+    let index = 1;
+    for (const book of books) {
+        book.showBookInfo(index);
+        index++;
+    }
 })();
