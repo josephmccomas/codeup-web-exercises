@@ -11,7 +11,22 @@
         userInput = prompt("I said, enter an odd number between 1 and 50");
     } else if (userInput % 2 === 1) {
         console.log(userInput)
+    } else if (Number.isSafeInteger(userInput) !== true) {
+        alert("Your entry is not valid");
+        userInput = prompt("Enter an odd number, and only an odd number");
     }
+    let i = 1;
+    do {
+        if (i == userInput) {
+            console.log(`Yikes! Skipping number: ${i}`);
+        } else if (i % 2 === 1) {
+            console.log(`Here is an odd number: ${i}`);
+        }
+        i++;
+    } while (i < 50); {
+
+}
+
 
 // Use a loop & continue stmt to output odds 1-50
 
