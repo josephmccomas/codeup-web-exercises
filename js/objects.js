@@ -109,9 +109,10 @@
     // for (const book of books) {
     //     console.log(`
     //     Book #: ${books.indexOf(book) + 1}
-    //     Title: ${title}
+    //     Title: ${this.title}
     //     Author: ${books.author.firstName} ${books.author.lastName} ---`);
     // }
+    // console.log(index);
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -123,64 +124,36 @@
      *   `showBookInfo` function.
      */
 
-
         let book = [
-        {
-            title: "Cycle of Arawn",
-            author: {
-                firstName: "Edward",
-                LastName: "Robertson"
-            }
-        },
-        {
-            title: "Sharpe's Rifles",
-            author: {
-                firstName: "Bernard",
-                lastName: "Cornwell"
-            }
-        },
-        {
-            title: "Mr. Midshipman Hornblower",
-            author: {
-            firstName: "C.S.",
-            lastName: "Forester"
-        },
-        }
-];
+            {
+                title: "Cycle of Arawn",
+                author: {
+                    firstName: "Edward",
+                    LastName: "Robertson"
+                }
+            },
+            {
+                title: "Sharpe's Tiger",
+                author: {
+                    firstName: "Bernard",
+                    lastName: "Cornwell"
+                }
+            },
+            {
+                title: "Mr. Midshipman Hornblower",
+                author: {
+                    firstName: "C.S.",
+                    lastName: "Forester"
+                }
+            },
+        ];
+    console.log(`${book.title} , by ${book.firstName} ${book.lastName}.`)
+    book.forEach(function (books) {
+        books.createBook.forEach(function (title, author) {
+        });
+        console.log(books);
 
-book.showBookInfo = function(book) {
-    return `${title} , by ${firstname} ${lastName}.`;
+    });
+});
 
-}
-book.showBookInfo();
-
-
-
-    // function createBook(title, fName, lName) {
-    //     let book = {
-    //         title: title,
-    //         author: {
-    //             firstName: fName,
-    //             lastName: lName
-    //         }
-    //     }
-    //     // Add a showBookInfo function to each book
-    //     book.showBookInfo = function () {
-    //         console.log(`
-    //         Book #: ${index + 1}
-    //         Title: ${this.title}
-    //         Author: ${books.author.firstName} ${books.author.lastName} ---`);
-    //     }
-    //     return book;
-    // }
-    // let books = [];
-    // books.push(createBook("The Cycle of Arawn", "Edward", "Robertson"))
-    // books.push(createBook("Dune", "Frank", "Herbert"))
-    // console.log(books);
-    //
-    // let index = 1;
-    // for (const book of books) {
-    //     book.showBookInfo(index);
-    //     index++;
-    // }
-})();
+// `${this.title} , by ${this.firstName} ${this.lastName}.`
