@@ -149,9 +149,8 @@
 ];
 
 book.showBookInfo = function(book) {
-    for (const books in book) {
-        return `${title} , by ${firstname} ${lastName}.`;
-    }
+    return `${title} , by ${firstname} ${lastName}.`;
+
 }
 book.showBookInfo();
 
