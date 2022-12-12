@@ -149,11 +149,9 @@
         ];
     console.log(`${book.title} , by ${book.firstName} ${book.lastName}.`)
     book.forEach(function (books) {
-        books.createBook.forEach(function (title, author) {
+        books.forEach(function createBooks(title, author) {
         });
         console.log(books);
 
     });
 });
-
-// `${this.title} , by ${this.firstName} ${this.lastName}.`
