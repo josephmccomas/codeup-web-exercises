@@ -124,6 +124,11 @@
      *   `showBookInfo` function.
      */
 
+
+    // console.log(`${book.title} , by ${book.firstName} ${book.lastName}.`)
+
+    book.createBook(function (title, author) {
+
         let book = [
             {
                 title: "Cycle of Arawn",
@@ -147,11 +152,14 @@
                 }
             },
         ];
-    console.log(`${book.title} , by ${book.firstName} ${book.lastName}.`)
-    book.forEach(function (books) {
-        books.forEach(function createBooks(title, author) {
-        });
+
+
+
+        // let books = [book[this.title] + book[this.author]];
+
+        return books;
         console.log(books);
 
     });
+    
 });
