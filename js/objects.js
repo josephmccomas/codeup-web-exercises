@@ -1,4 +1,4 @@
-(function() {
+// (function() {
     "use strict";
 
     /**
@@ -118,16 +118,7 @@
      * - Create a function named `createBook` that accepts a title and author
      *   name and returns a book object with the properties described
      *   previously. Refactor your code that creates the books array to instead
-     *   use your function.
-     * - Create a function named `showBookInfo` that accepts a book object and
-     *   outputs the information described above. Refactor your loop to use your
-     *   `showBookInfo` function.
-     */
-
-
-    // console.log(`${book.title} , by ${book.firstName} ${book.lastName}.`)
-
-    book.createBook(function (title, author) {
+     *   use your function.*/
 
         let book = [
             {
@@ -153,13 +144,11 @@
             },
         ];
 
+console.log(book.title);
+    /** - Create a function named `showBookInfo` that accepts a book object and
+     *   outputs the information described above. Refactor your loop to use your
+     *   `showBookInfo` function.
+     */
 
-
-        // let books = [book[this.title] + book[this.author]];
-
-        return books;
-        console.log(books);
-
-    });
     
-});
+// });
