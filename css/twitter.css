@@ -28,7 +28,6 @@ a {
 }
 .top-nav {
     background: var(--light-bg);
-    position: fixed;
     z-index: 1;
     width: 100%;
 }
@@ -56,12 +55,52 @@ a {
 }
 .profile-image {
     position: absolute;
-    z-index: 2;
-    top: 250px;
+    top: 310px;
 }
 .profile-form {
+    margin-right: .5em;
     float: right;
     line-height: 80px;
+}
+.profile-details {
+    margin-left: .5em;
+    float: left;
+    width: calc(25% - .5em);
+}
+.timeline {
+    float: left;
+    width: calc(50% - 1em);
+    margin-right: .5em;
+}
+.who-to-follow {
+    float: left;
+    width: calc(25% - .5em);
+}
+.container {
+    margin-top: 2em;
+}
+/*The media selector should use 100% of the width of its container. Its background color should be light-bg. It should have a border at the bottom of 1px with color --separator-color. It must have a padding of .5em. Use the property overflow since it will contain only floating elements.*/
+.media {
+    width: 100%;
+    background-color: var(--light-bg);
+    border-bottom: 1px var(--separator-color) solid;
+    padding: .5em;
+    overflow: auto;
+}
+/*The media-image maximum width should be 50px, and it should float. It must have a margin top of 1.33em.*/
+.media-image {
+    max-width: 50px;
+    float: left;
+    margin-top: 1.33em;
+}
+/*The media-body should float too. Its width will be 100%. We need to use calc to subtract the width of the image.*/
+.media-body {
+    width: calc(100% - 50px);
+}
+/*Finally, remove the bullets and the padding from profile-items. Add a margin of .5em to the profile-entry class.*/
+.profile-items {
+    padding: 0;
+    list-style: none;
 }
 .btn {
     border: 1px solid var(--main-link-color);
