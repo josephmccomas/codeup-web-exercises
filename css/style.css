@@ -1,6 +1,7 @@
 html {
     font-family: 'Space Grotesk', sans-serif;
 }
+
 .fancy-header {
     color: purple;
     text-align: center;
@@ -46,6 +47,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     border: 3px solid darkslategrey;
+    text-align: center;
 }
 thead th:nth-child(1) {
     width: 30%;
