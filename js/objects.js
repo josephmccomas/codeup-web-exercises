@@ -144,12 +144,7 @@
             },
         ];
     console.log(books[0].title);
-    // books.createBook = function () {
-    //     let book = [];
-    //     books.forEach(this.title)
-    //         book.push(this.title);
-    //
-    // }
+
     function createBook(title, author) {
         let book = {};
         book.title = title;
