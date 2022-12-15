@@ -102,6 +102,9 @@ a {
     padding: 0;
     list-style: none;
 }
+.profile-entry {
+    padding: .5em;
+}
 .btn {
     border: 1px solid var(--main-link-color);
     color: var(--main-link-color);
