@@ -1,4 +1,4 @@
-// (function() {
+(function() {
     "use strict";
 
     /**
@@ -120,7 +120,7 @@
      *   previously. Refactor your code that creates the books array to instead
      *   use your function.*/
 
-        let book = [
+        let books = [
             {
                 title: "Cycle of Arawn",
                 author: {
@@ -143,12 +143,33 @@
                 }
             },
         ];
+    console.log(books[0].title);
+    // books.createBook = function () {
+    //     let book = [];
+    //     books.forEach(this.title)
+    //         book.push(this.title);
+    //
+    // }
+    function createBook(title, author) {
+        let book = {};
+        book.title = title;
+        book.author = author;
+        return book;
+    }
+let myBook = createBook("War and Peace", {firstName: "L", lastName: "Tolstoy"});
+    console.log(myBook);
+    books.push(myBook);
+    console.log(books);
 
-console.log(book.title);
+    books.showBookInfo = function() {
+        books.forEach(books.title, books.author);
+    }
+    console.log(books);
+
     /** - Create a function named `showBookInfo` that accepts a book object and
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
 
     
-// });
+})();
