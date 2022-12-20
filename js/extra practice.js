@@ -19,6 +19,7 @@ function drawRectangle(width, height) {
         for (let i = 0; i < width; i++) {
             output += "*";
         }
+        console.log(output);
     }
 
     function drawRectangleMiddle(width, height) {
