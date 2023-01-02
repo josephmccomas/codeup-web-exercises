@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+nav {
+    background-color: grey;
+    font-family: SansSerif;
+
+    display: flex;
+    justify-content: space-between;
+
+
+}
+#logo {
+    font-size: 3em;
+    padding: .2em;
+}
+body {
+    margin: 0;
+}
