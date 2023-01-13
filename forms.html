@@ -5,6 +5,44 @@
     <title>Title</title>
 </head>
 <body>
+<form method="POST" action="">
 
+    <label for="username">Username</label>
+    <input id="username" name="username" type="text">
+    <br>
+
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password">
+    <br>
+<hr>
+<br>
+<label>
+    Bio<br>
+    <textarea name="Bio"></textarea>
+</label>
+<hr>
+<br>
+<section>
+    How did you hear about us?<br>
+    <label>
+        <input type="radio" name="How did you hear about us?" value="Billboard">Billboard<br>
+        <input type="radio" name="How did you hear about us?" value="Radio Advertisement">Radio Advertisement<br>
+        <input type="radio" name="How did you hear about us?" value="Internet Advertisement">Internet Advertisement<br>
+        <input type="radio" name="How did you hear about us?" value="Other">Other<br>
+<!-- Allow multiple selections by removing the "name" property -->
+    </label>
+</section>
+<hr>
+<br>
+<select name="Browser Preference">
+    <option value="Firefox - Best">Firefox</option>
+    <option value="Chrome - Mediocre">Chrome</option>
+    <option value="Safari - Lame">Safari</option>
+    <option value="Edge - Get out...">Edge</option>
+</select>
+    <br>
+    <br>
+    <input type="submit">
+</form>
 </body>
 </html>

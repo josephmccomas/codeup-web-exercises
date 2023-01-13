@@ -8,6 +8,11 @@
 <body>
 
 <h1 id="main-header">Hello World!</h1>
+<button id="btn1">Header Change</button>
+<button id="btn2">Sub-Header Style</button>
+<button id="btn3">List Colors</button>
+<button id="btn4">Text Change</button>
+
 <ul>
     <li data-dbid="1">Item 1</li>
     <li data-dbid="2">Item 2</li>
@@ -30,19 +35,19 @@
     (function() {
         "use strict";
         // TODO: Uncomment next line and get the main header element by id
-        let mainHeader = document.querySelector("main-header");
+        let mainHeader = document.querySelector('#main-header');
         console.log(mainHeader.innerHTML);
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = "Javascript is cool";
-        console.log(mainHeader.innerHTML);
+        // mainHeader.innerHTML = "Javascript is cool";
+        // console.log(mainHeader.innerHTML);
 
         // TODO: Uncomment the next line and get the sub header element by id
-        let subHeader = document.querySelector("sub-header");
+        let subHeader = document.querySelector("#sub-header");
         console.log(subHeader.innerHTML);
 
         // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = "blue";
+        // subHeader.style.color = "blue";
 
         // TODO: Uncomment the next line and get all list items
         let listItems = document.querySelectorAll("li");
@@ -50,25 +55,56 @@
 
         // TODO: Set text color on every other list item to grey
         // let listItems = document.getElementsByTagName('li');
-        for (let i = 0; i < listItems.length; i++) {
-            if (i % 2 == 0) {
-                listItems[i].style.color = "grey";
-            }
-            // TODO: Set text color of li with dbid = 1 to blue
-            if (listItems[i].getAttribute("data-dbid") === "1") {
-                listItems[i].style.color = "blue";
-            //document.querySelector("li[data-dbid='1'].style.color = "blue";
-            }
-        }
-       // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        let subParagraphs = document.querySelectorAll("sub-paragraph");
+        // for (let i = 0; i < listItems.length; i++) {
+        //     if (i % 2 === 0) {
+        //         listItems[i].style.color = "grey";
+        //     }
+        // TODO: Set text color of li with dbid = 1 to blue
+        //     if (listItems[i].getAttribute("data-dbid") === "1") {
+        //         listItems[i].style.color = "blue";
+        //     document.querySelector("li[data-dbid='1'])".style.color = "blue";
+        //     }
+        // }
+        // TODO: Uncomment the next line and get all elements with class name sub-paragraph
+        let subParagraphs = document.querySelectorAll("#sub-paragraph");
         console.log(subParagraphs.innerHTML);
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs[0].innerText = "Mission Accomplished!";
+        // subParagraphs[0].innerText = "Mission Accomplished!";
         console.log(subParagraphs.innerHTML);
 
 
+        let btn1 = document.querySelector('#btn1');
+        let btn2 = document.querySelector('#btn2');
+        let btn3 = document.querySelector('btn3');
+        let btn4 = document.querySelector('btn4');
+
+        btn1.addEventListener('click', function () {
+            mainHeader.innerHTML = "Javascript is cool";
+        });
+        document.getElementById('btn1').addEventListener('click', listener);
+
+        btn2.addEventListener('click', function () {
+            subHeader.style.color = "blue";
+        });
+        document.getElementById('btn2').addEventListener('click', listener2);
+
+        btn3.addEventListener('click', function () {
+            for (let i = 0; i < listItems.length; i++) {
+                if (i % 2 === 0) {
+                    listItems[i].style.color = "grey";
+                }
+                if (listItems[i].getAttribute("data-dbid") == "1") {
+                    listItems[i].style.color = "blue";
+                }
+            }
+        });
+            document.getElementById('btn3').addEventListener('click', listener3);
+
+        btn4.addEventListener('click', function () {
+            subParagraphs[0].innerText = "Mission Accomplished!";
+        });
+            document.getElementById('btn4').addEventListener('click', listener4);
 
     })();
 </script>
