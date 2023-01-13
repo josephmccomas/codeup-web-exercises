@@ -1,16 +1,89 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/my-custom-javascript.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+            integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+
     <title>Curriculum Code Sample</title>
 </head>
 <body>
 
 <!-- INSERT HTML CODE SAMPLE HERE -->
+<div class="head-div">
+    <h1 id="header-1">Hello World!</h1>
+<!--    <h1 id="header-1">World Hello!</h1>-->
+</div>
+
+<h3 id="sub-header">Test</h3>
+
+<p class="p1">Content1</p>
+<p class="p2">Content2</p>
+
+<p class="codeup">Blah1</p>
+<p class="codeup">Blah2</p>
+<p class="codeup">Blah3</p>
+
+<ul class="list">
+    <li id="li-1">1</li>
+    <li id="li-2">2</li>
+    <li id="li-3">3</li>
+</ul>
+
+<script>
+<!-- SELECTORS EXERCISES -->
+    // #1
+    // alert($("#header-1").html());
+
+    // #2
+    // alert($("#sub-header").html());
+
+    // #3 -- Displayed the first element, then moved on.
+
+    // #4
+    // $(".codeup").css("border", "1px solid red");
+
+    // #5
+    $("#li-1, #li-2, #li-3").css("font-size", "20px");
+
+    // #6
+    $("h1, p, li").css("background", "yellow");
+
+    // #7
+    alert($(".h1").text());
 
 
-<script src="https://code.jquery.com/jquery-3.6.3.js"
-        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    // $(document).ready(function () {
+    //     alert('DOM Loaded');
+    // });
+
+    // $("#header-1");
+    // console.log("header-1");
+    // // document.querySelector("header1Var);
+
+    // $("sub-header");
+    // console.log("sub-header");
+
+    // Select child
+    // console.log("#id > child");
+
+    // innerText/innerHTML don't work:
+    // $("#header-1").text("Blah blah");
+    // console.log($("#header-1").html());
+
+    // Change BG color of all element within my-box class
+    // $(".my-box").css("background-color", "red");
+    // $("#my-box").css("background-color", "red");
+
+    // Change font size to 28px for all <p> elements
+    // $("p").css("font-sizw", "28px");
+
+    // Change font family of all <p>, ny-box classes elements.
+    // $("p, .my-box").css("font-family", "sans-serif");
+
+    // Add 5px dotted border to <p>
+    // $("p").css("border". "5px dotted red");
+
+
+</script>
 </body>
 
