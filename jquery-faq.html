@@ -9,27 +9,7 @@
         .invisible {
             visibility: hidden;
         }
-        .divs {
-            display: inline-block;
-            height: 100px;
-            width: 100px;
-            margin: 20px;
-        }
-        .btn {
-            display: inline-block;
-            height: 100px;
-            width: 100px;
-            margin: 20px;
-        }
-        .div-1 {
-            background-color: black;
-        }
-        .div-2 {
-            background-color: red;
-        }
-        .div-3 {
-            background-color: blue;
-        }
+
     </style>
 </head>
 <body>
@@ -114,22 +94,23 @@
     <li>Item3</li>
     <li>Item4</li>
 </ul>
-<div class="container">
-    <div class="divs div-1"></div>
-    <div class="divs div-2"></div>
-    <div class="divs div-3"></div>
-</div>
-<br>
-<div class="container">
-    <div class="btn">
-        <input type="button" id="btnL" value="Swap L/R">
-    </div>
-    <div class="btn">
-        <input type="button" id="btnC" value="Swap Rando">
-    </div>
-    <div class="btn">
-        <input type="button" id="btnR" value="Swap R/L">
-    </div>
+
+<!--<div class="container">-->
+<!--    <div class="divs div-1"></div>-->
+<!--    <div class="divs div-2"></div>-->
+<!--    <div class="divs div-3"></div>-->
+<!--</div>-->
+<!--<br>-->
+<!--<div class="container">-->
+<!--    <div class="btn">-->
+<!--        <input type="button" id="btnL" value="Swap L/R">-->
+<!--    </div>-->
+<!--    <div class="btn">-->
+<!--        <input type="button" id="btnC" value="Swap Rando">-->
+<!--    </div>-->
+<!--    <div class="btn">-->
+<!--        <input type="button" id="btnR" value="Swap R/L">-->
+<!--    </div>-->
 </div>
 
 <script>
@@ -151,13 +132,7 @@
             $(this).parents().children(":first-child").css("color", "blue");
         })
     });
-    $(document).ready(function (){
-        tdiv-1 = #
-        $("#btnL").click(function (){
-            $("#div-1").removeClass("#div-1").addClass("#div-2");
-            $("#div-2").removeClass("#div-2").addClass("#div-1");
-        })
-    })
+
 
 </script>
 <!-- START LESSON NOTES -->
