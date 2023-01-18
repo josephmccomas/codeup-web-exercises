@@ -24,9 +24,9 @@
 <p class="codeup">Blah3</p>
 
 <ul class="list">
-    <li id="li-1">1</li>
-    <li id="li-2">2</li>
-    <li id="li-3">3</li>
+    <li class="li" id="li-1">111</li>
+    <li class="li" id="li-2">222</li>
+    <li class="li" id="li-3">333</li>
 </ul>
 
 <script>
@@ -43,14 +43,37 @@
     // $(".codeup").css("border", "1px solid red");
 
     // #5
-    $("#li-1, #li-2, #li-3").css("font-size", "20px");
+    // $("#li-1, #li-2, #li-3").css("font-size", "20px");
 
     // #6
-    $("h1, p, li").css("background", "yellow");
+    // $("h1, p, li").css("background", "yellow");
 
     // #7
-    alert($(".h1").text());
+    // alert($(".h1").text());
 
+<!-- MOUSE EVENTS EXERCISE -->
+
+    $(document).ready(function (){
+        $("h1").click(function (){
+            $(this).css("background", "red")
+        })
+    })
+
+    $(document).ready(function (){
+        $("p").dblclick(function (){
+            $(this).css("font-size", "18px")
+        });
+    })
+
+        $("li").hover(function () {
+            $(this).css("color", "red");
+        }, function () {
+                $(this).css("color", "black");
+        });
+
+
+
+// NOTES
 
     // $(document).ready(function () {
     //     alert('DOM Loaded');
@@ -83,6 +106,29 @@
     // Add 5px dotted border to <p>
     // $("p").css("border". "5px dotted red");
 
+    // an alert when you click the first h4.  Use $(this)
+    // $(document).ready(function (){
+
+
+    // $("#my-h4-1").click(function () {
+        // $(this).css("background", "")
+        // alert($(this).html());
+    // });
+
+
+//     alert when you double-click the second h4
+
+        // $("#my-h4-2").dblclick(function (){
+        //     alert($(this).html());
+        // });
+
+// change the color of the h4 when you hover over it
+
+    //     $("#my-h4-3").hover(function (hoverOn, hoverOff) {;
+    //         function hoverOn() {
+    //             $(this).css("color", "green");
+    //         }
+    // })});
 
 </script>
 </body>
