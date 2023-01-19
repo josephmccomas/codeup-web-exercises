@@ -27,32 +27,27 @@
         "use strict";
 
         // TODO: Create an AJAX GET request for the file under data/inventory.json
-        $.ajax("../data/inventory.json", "get").done(function(data, success) {
-            // alert("AJAX call completed successfully!");
-            console.log("Request status: " + success);
-            console.log("Data returned from server:");
-            console.log(data);
-
-        });
+        // $.ajax("../data/inventory.json", "get").done(function(data, success) {
+        //     // alert("AJAX call completed successfully!");
+        //     console.log("Request status: " + success);
+        //     console.log("Data returned from server:");
+        //     console.log(data);
+        // });
         // TODO: Take the data from inventory.json and append it to the products table
         //       HINT: Your data should come back as a JSON object; use console.log() to inspect
         //             its contents and fields
         //       HINT: You will want to target #insertProducts for your new HTML elements
-        let dataPull = [data];
-        function fillTable() {
-            let myData = Object.keys(dataPull).map((data)=>{
-                let innerData = myData;
-                let title = innerData.title;
-                let quantity = innerData.quantity;
-                let category = innerData.category;
-                let price = innerData.price;
-                return [title, quantity, category, price]
-                // for (const key in dataPull) {
-                //     const {} = dataPull[key];
+
+        // $.ajax("../data/inventory.json", "get").done(function(data) {
+            $.ajax({
+                url: "../data/inventory.json",
+                type: 'GET',
+                dataType: 'json',
+        }).then(function(data) {
+            $.each(function(data) {
+                $("#insertProducts").append(${data.title} ${data.quantity} ${data.categories} ${data.price});
             });
-            $(document).appendTo("table > tbody").innerHTML += $(myData);
-        }
-        fillTable($("#insertProducts"));
+        });
     })();
 </script>
 
