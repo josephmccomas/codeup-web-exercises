@@ -10,7 +10,7 @@
             visibility: hidden;
         }
         .container {
-            display: flex;
+            display: inline-block;
 
         }
         .divs {
@@ -102,26 +102,25 @@
     <li>Item4</li>
 </ul>
 
-<div class="container">
+<div>
     <div class="divs" id="div-1"><img src="https://interactive-examples.mdn.mozilla.net/media/examples/firefox-logo.svg" height="100px" width="100px"></div>
+    <input type="button" id="btn1" value="Swap L/R">
+</div>
+<div>
     <div class="divs" id="div-2"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Google_Chrome_icon_%28February_2022%29.svg/1920px-Google_Chrome_icon_%28February_2022%29.svg.png?20221017155421" height="100px" width="100px"></div>
-    <div class="divs" id="div-3"><img src="https://cdn.icon-icons.com/icons2/2552/PNG/512/edge_browser_logo_icon_152998.png" height="100px" width="100px"></div>
+    <input type="button" id="btn2" value="Swap Rando">
 </div>
-<br>
-<div class="container">
-    <div class="btn">
-        <input type="button" id="btnL" value="Swap L/R">
-    </div>
-    <div class="btn">
-        <input type="button" id="btnC" value="Swap Rando">
-    </div>
-    <div class="btn">
-        <input type="button" id="btnR" value="Swap R/L">
-    </div>
+<div>
+    <div class="divs" id="div-3"><img src="https://cdn.icon-icons.com/icons2/2552/PNG/512/edge_browser_logo_icon_152998.png" height="100px" width="100px"></div>        <input type="button" id="btn3" value="Swap R/L">
 </div>
+
 
 <script>
     $(document).ready(function() {
+        const image1url = "https://interactive-examples.mdn.mozilla.net/media/examples/firefox-logo.svg";
+        const image2url = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Google_Chrome_icon_%28February_2022%29.svg/1920px-Google_Chrome_icon_%28February_2022%29.svg.png?20221017155421";
+        const image3url = "https://cdn.icon-icons.com/icons2/2552/PNG/512/edge_browser_logo_icon_152998.png";
+
         $("#toggle-link").click(function(event) {
             event.preventDefault();
             $("dd").toggleClass("invisible");
@@ -133,25 +132,52 @@
             $("li:last-child").css("background-color", "yellow");
         })
         $("h3").click(function (){
-            $("ul").children().css("font-weight", "bolder");
+            $(this).next().children().css("font-weight", "bolder");
         })
-            let flag=false;
-            $("#btnL").click(function() {
-                if(flag) {
-                    let image1 = $("#div-1").attr("https://interactive-examples.mdn.mozilla.net/media/examples/firefox-logo.svg","image1_src");
-                    let image2 = $("#div-2").attr("https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Google_Chrome_icon_%28February_2022%29.svg/1920px-Google_Chrome_icon_%28February_2022%29.svg.png?20221017155421","image2_src");
-                    flag=false;
-                }
-                else {
-                    let image1_src = $("#div-1").attr("https://interactive-examples.mdn.mozilla.net/media/examples/firefox-logo.svg");
-                    let image2_src = $("#div-2").attr("https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Google_Chrome_icon_%28February_2022%29.svg/1920px-Google_Chrome_icon_%28February_2022%29.svg.png?20221017155421");
-                    $("#div-1").attr("https://interactive-examples.mdn.mozilla.net/media/examples/firefox-logo.svg", image2_src);
-                    $("#div-2").attr("https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Google_Chrome_icon_%28February_2022%29.svg/1920px-Google_Chrome_icon_%28February_2022%29.svg.png?20221017155421", image1_src);
-                    flag = true;
-                }
+        $("li").click(function (){
+            $(this).parent().children().first().css("color", "blue");
+        })
+
+        // BONUS FIASCO
+
+        $("btn1").click(function (){
+
+            let imageDiv1 = $(this).prev();
+            let imageDiv2 = $(this).parent().next().children().first();
+            swapImages(imageDiv1, imageDiv2);
+        })
+
+        $("btn2").click(function (){
+            let imageDiv1 = undefined;
+            let imageDiv2 = undefined;
+            if (Math.random() < .5) {
+                imageDiv1 = $(this).prev();
+                imageDiv2 = $(this).parent().next().children().first();
+            } else {
+                imageDiv1 = $(this).prev();
+                imageDiv2 = $(this).parent().next().children().first();
+            }
+            swapImages(imageDiv1, imageDiv2);
+        })
+        $("btn3").click(function (){
+
+            let imageDiv2 = $(this).prev();
+            let imageDiv3 = $(this).parent().next().children().first();
+            swapImages(imageDiv2, imageDiv3);
         })
     });
 
+    function swapImages(imageDiv1, imageDiv2) {
+        let img1 = imageDiv1.css("background-image");
+        let img2 = imageDiv2.css("background-image"));
+
+        let img3 = img1;
+        img1 = img2;
+        img2 = img3;
+
+        imageDiv1.css("background-image", img1);
+        imageDiv2.css("background-image", img2);
+    }
 
 </script>
 <!-- START LESSON NOTES -->
