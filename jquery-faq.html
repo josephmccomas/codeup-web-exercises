@@ -9,7 +9,14 @@
         .invisible {
             visibility: hidden;
         }
+        .container {
+            display: flex;
 
+        }
+        .divs {
+            height: 100px;
+            width: 100px;
+        }
     </style>
 </head>
 <body>
@@ -95,22 +102,22 @@
     <li>Item4</li>
 </ul>
 
-<!--<div class="container">-->
-<!--    <div class="divs div-1"></div>-->
-<!--    <div class="divs div-2"></div>-->
-<!--    <div class="divs div-3"></div>-->
-<!--</div>-->
-<!--<br>-->
-<!--<div class="container">-->
-<!--    <div class="btn">-->
-<!--        <input type="button" id="btnL" value="Swap L/R">-->
-<!--    </div>-->
-<!--    <div class="btn">-->
-<!--        <input type="button" id="btnC" value="Swap Rando">-->
-<!--    </div>-->
-<!--    <div class="btn">-->
-<!--        <input type="button" id="btnR" value="Swap R/L">-->
-<!--    </div>-->
+<div class="container">
+    <div class="divs" id="div-1"><img src="https://interactive-examples.mdn.mozilla.net/media/examples/firefox-logo.svg" height="100px" width="100px"></div>
+    <div class="divs" id="div-2"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Google_Chrome_icon_%28February_2022%29.svg/1920px-Google_Chrome_icon_%28February_2022%29.svg.png?20221017155421" height="100px" width="100px"></div>
+    <div class="divs" id="div-3"><img src="https://cdn.icon-icons.com/icons2/2552/PNG/512/edge_browser_logo_icon_152998.png" height="100px" width="100px"></div>
+</div>
+<br>
+<div class="container">
+    <div class="btn">
+        <input type="button" id="btnL" value="Swap L/R">
+    </div>
+    <div class="btn">
+        <input type="button" id="btnC" value="Swap Rando">
+    </div>
+    <div class="btn">
+        <input type="button" id="btnR" value="Swap R/L">
+    </div>
 </div>
 
 <script>
@@ -128,8 +135,20 @@
         $("h3").click(function (){
             $("ul").children().css("font-weight", "bolder");
         })
-        $("li").click(function (){
-            $(this).parents().children(":first-child").css("color", "blue");
+            let flag=false;
+            $("#btnL").click(function() {
+                if(flag) {
+                    let image1 = $("#div-1").attr("https://interactive-examples.mdn.mozilla.net/media/examples/firefox-logo.svg","image1_src");
+                    let image2 = $("#div-2").attr("https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Google_Chrome_icon_%28February_2022%29.svg/1920px-Google_Chrome_icon_%28February_2022%29.svg.png?20221017155421","image2_src");
+                    flag=false;
+                }
+                else {
+                    let image1_src = $("#div-1").attr("https://interactive-examples.mdn.mozilla.net/media/examples/firefox-logo.svg");
+                    let image2_src = $("#div-2").attr("https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Google_Chrome_icon_%28February_2022%29.svg/1920px-Google_Chrome_icon_%28February_2022%29.svg.png?20221017155421");
+                    $("#div-1").attr("https://interactive-examples.mdn.mozilla.net/media/examples/firefox-logo.svg", image2_src);
+                    $("#div-2").attr("https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Google_Chrome_icon_%28February_2022%29.svg/1920px-Google_Chrome_icon_%28February_2022%29.svg.png?20221017155421", image1_src);
+                    flag = true;
+                }
         })
     });
 
