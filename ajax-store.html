@@ -11,31 +11,48 @@
 <table id="products">
     <thead>
     <tr>
-        <th>Title</th>
-        <th>Quantity</th>
-        <th>Price</th>
-        <th>Categories</th>
+        <th id="title">Title</th>
+        <th id="quantity">Quantity</th>
+        <th id="price">Price</th>
+        <th id="categories">Categories</th>
     </tr>
     </thead>
     <tbody id="insertProducts"></tbody>
 </table>
 
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
 
 <script>
     (function() {
         "use strict";
+
         // TODO: Create an AJAX GET request for the file under data/inventory.json
-        $.get("").done(function(data, success) {
-            alert("AJAX call completed successfully!");
+        $.ajax("../data/inventory.json", "get").done(function(data, success) {
+            // alert("AJAX call completed successfully!");
             console.log("Request status: " + success);
             console.log("Data returned from server:");
             console.log(data);
+
         });
         // TODO: Take the data from inventory.json and append it to the products table
         //       HINT: Your data should come back as a JSON object; use console.log() to inspect
         //             its contents and fields
         //       HINT: You will want to target #insertProducts for your new HTML elements
+        let dataPull = [data];
+        function fillTable() {
+            let myData = Object.keys(dataPull).map((data)=>{
+                let innerData = myData;
+                let title = innerData.title;
+                let quantity = innerData.quantity;
+                let category = innerData.category;
+                let price = innerData.price;
+                return [title, quantity, category, price]
+                // for (const key in dataPull) {
+                //     const {} = dataPull[key];
+            });
+            $(document).appendTo("table > tbody").innerHTML += $(myData);
+        }
+        fillTable($("#insertProducts"));
     })();
 </script>
 
