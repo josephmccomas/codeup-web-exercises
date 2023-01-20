@@ -51,8 +51,10 @@
             zoom: 8,
             center: [-98.4946, 29.4252]
         });
+        map.addControl(new mapboxgl.NavigationControl());
 
-        let marker = new mapboxgl.Marker().setLngLat([-98.4946, 29.4252]).addTo(map);
+        // new mapboxgl.Marker().setLngLat([-98.4946, 29.4252]).addTo(map)
+        let marker;
         let address = ("18318 Sonterra Place San Antonio, TX 78258");
         // find out where north star mall is and make a marker and popup for it
         // the  geocode method from mapbox-geocoder-utils.js
@@ -66,7 +68,9 @@
 
                 const popup = new mapboxgl.Popup();
                 popup.setHTML(`
-                    <h3>${address}</h3>
+                    <img src="https://images.squarespace-cdn.com/content/v1/61eadd315cff043dce9160ea/adec4a4d-edc1-434a-a64f-c89465a84db9/chama_logo_white.png?format=1500w" height="50px" width="50px">
+                    <h5>Chama-Gaucha Brazilian Steakhouse</h5>
+                    <p>${address}</p>
                 `);
                 marker.setPopup(popup);
 
@@ -74,7 +78,16 @@
                 console.log("Boom");
             });
         }
-
+        function mapping() {
+            let mappings = [];
+            let mainCoords= [
+                ["Cheesy Jane's", "4200 Broadway, San Antonio, TX 78209"],
+                ["Longhorn Cafe", "1667 TX-46, New Braunfels, TX 78132"],
+                ["Ginza Ramen & Poke", "5539 W Loop 1604 N #104, San Antonio, TX 78253"]
+            ];
+            mainCoords.forEach(function(childArray => (mappings.push(new mapboxgl.Marker().setLngLat(mainCoords[i]).addTo(map));
+        }
+        mapping();
         pinThatAddress(address);
         // pinThatAddress("Rackspace");
 
@@ -92,6 +105,7 @@
         // popup.setHTML("<h3>North Star Mall</h3>");
         // marker.setPopup(popup);
     });
+
 </script>
 </body>
 </html>
