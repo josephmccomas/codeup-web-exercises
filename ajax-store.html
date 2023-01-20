@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,43 +10,65 @@
 <table id="products">
     <thead>
     <tr>
-        <th id="title">Title</th>
-        <th id="quantity">Quantity</th>
-        <th id="price">Price</th>
-        <th id="categories">Categories</th>
+        <th>Title</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Categories</th>
     </tr>
     </thead>
     <tbody id="insertProducts"></tbody>
 </table>
-
-<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+<button id="refresh-btn" value="Refresh"></button>
+<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+        crossorigin="anonymous"></script>
 
 <script>
-    (function() {
+    (function () {
         "use strict";
 
         // TODO: Create an AJAX GET request for the file under data/inventory.json
-        // $.ajax("../data/inventory.json", "get").done(function(data, success) {
-        //     // alert("AJAX call completed successfully!");
-        //     console.log("Request status: " + success);
-        //     console.log("Data returned from server:");
-        //     console.log(data);
-        // });
+        $.ajax("../data/inventory.json", "get").done(function (data) {
+            //     // alert("AJAX call completed successfully!");
+            //     console.log("Request status: " + success);
+            //     console.log("Data returned from server:");
+            //     console.log(data);
+            function createHTMLRow() {
+                let htmlString = "";
+                for (let i = 0; i < data.length; i++) {
+                    const tool = data[i];
+                    htmlString +=
+                        <tr>
+                            <td>${tool.title}</td>
+                            <td>${tool.quantity}</td>
+                            <td>${tool.price}</td>
+                            <td>${tool.categories}</td>
+                        </tr>
+                }
+                $("#insertProducts").html(htmlString);
+            }
+            createHTMLRow();
+        })
         // TODO: Take the data from inventory.json and append it to the products table
         //       HINT: Your data should come back as a JSON object; use console.log() to inspect
         //             its contents and fields
         //       HINT: You will want to target #insertProducts for your new HTML elements
+        $("#refresh-btn").click(function () {
+            fetchTools();
+        });
+        fetchTools();
+
 
         // $.ajax("../data/inventory.json", "get").done(function(data) {
-            $.ajax({
-                url: "../data/inventory.json",
-                type: 'GET',
-                dataType: 'json',
-        }).then(function(data) {
-            $.each(function(data) {
-                $("#insertProducts").append(${data.title} ${data.quantity} ${data.categories} ${data.price});
-            });
-        });
+        //     $.ajax({
+        //         url: "../data/inventory.json",
+        //         type: 'GET',
+        //         dataType: 'json',
+        //     }).then(function (data) {
+        //         $.each(function (data) {
+        //             $("#insertProducts").append(${tool.title} ${tool.quantity} ${tool.categories} ${tool.price});
+        //         });
+        //     });
+        // });
     })();
 </script>
 
