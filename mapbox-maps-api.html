@@ -53,7 +53,7 @@
         });
 
         let marker = new mapboxgl.Marker().setLngLat([-98.4946, 29.4252]).addTo(map);
-
+        let address = ("18318 Sonterra Place San Antonio, TX 78258");
         // find out where north star mall is and make a marker and popup for it
         // the  geocode method from mapbox-geocoder-utils.js
 
@@ -65,7 +65,9 @@
                 marker.addTo(map);
 
                 const popup = new mapboxgl.Popup();
-                popup.setHTML(`<h3>${address}</h3>`);
+                popup.setHTML(`
+                    <h3>${address}</h3>
+                `);
                 marker.setPopup(popup);
 
             }).catch(function(error) {
@@ -73,8 +75,8 @@
             });
         }
 
-        pinThatAddress("North Star Mall");
-        pinThatAddress("Rackspace");
+        pinThatAddress(address);
+        // pinThatAddress("Rackspace");
 
         // reverse geocode method from mapbox-geocoder-utils.js
         reverseGeocode({lng: -98.393114, lat: 29.507893}, MAPBOX_API_KEY).then(function(results) {
@@ -82,13 +84,13 @@
             console.log(results);
         });
 
-        marker = new mapboxgl.Marker();
-        marker.setLngLat([-98.4960, 29.5185]);
-        marker.addTo(map);
-
-        const popup = new mapboxgl.Popup();
-        popup.setHTML("<h3>North Star Mall</h3>");
-        marker.setPopup(popup);
+        // marker = new mapboxgl.Marker();
+        // marker.setLngLat([-98.4960, 29.5185]);
+        // marker.addTo(map);
+        //
+        // const popup = new mapboxgl.Popup();
+        // popup.setHTML("<h3>North Star Mall</h3>");
+        // marker.setPopup(popup);
     });
 </script>
 </body>
