@@ -85,7 +85,7 @@
                 ["Longhorn Cafe", "1667 TX-46, New Braunfels, TX 78132"],
                 ["Ginza Ramen & Poke", "5539 W Loop 1604 N #104, San Antonio, TX 78253"]
             ];
-            mainCoords.forEach(function(childArray => (mappings.push(new mapboxgl.Marker().setLngLat(mainCoords[i]).addTo(map));
+            mainCoords.forEach(function(childArray => (mappings.push(new mapboxgl.Marker().addTo(map));
         }
         mapping();
         pinThatAddress(address);
