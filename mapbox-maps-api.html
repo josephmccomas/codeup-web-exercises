@@ -91,19 +91,32 @@
         pinThatAddress(address);
         // pinThatAddress("Rackspace");
 
+        restaurants.forEach(function (restaurant))
+
         // reverse geocode method from mapbox-geocoder-utils.js
         reverseGeocode({lng: -98.393114, lat: 29.507893}, MAPBOX_API_KEY).then(function(results) {
             // logs the address for The Alamo
             console.log(results);
         });
 
-        // marker = new mapboxgl.Marker();
+        // marker = new mapboxgl.Marker({"color", "green");
         // marker.setLngLat([-98.4960, 29.5185]);
         // marker.addTo(map);
         //
         // const popup = new mapboxgl.Popup();
         // popup.setHTML("<h3>North Star Mall</h3>");
         // marker.setPopup(popup);
+
+        $("#search-btn").click(function (){
+            const address = $("#address-input").val();
+            geocode(address, MAPBOX_API_KEY).then(function (result) {
+                new mapboxgl.Marker(result);
+                map.flyTo( {
+                    center: result,
+                    zoom: 10
+                });
+            })
+        })
     });
 
 </script>

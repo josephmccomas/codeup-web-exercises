@@ -1,18 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
-
   <title>Konami Code</title>
-</head>
-<body>
-<h1>Konami Code</h1>
+  <style>
+    body {
+      background-size: auto;
+      background: black url("img/ContraBG.jpg") no-repeat top;
+    }
+    h1 {
+      color: white;
+      position: relative;
+    }
+    p {
+      color: white;
+    }
+    .blink-me {
+      animation: blinker 1s linear infinite;
+    }
 
-<!--<script src="/js/jquery.js"></script>-->
-<script>
-  "use strict";
+    @keyframes blinker {
+      50% {
+        opacity: 0;
+      }
+    }
+      </style>
+    </head>
+    <body>
 
-
+    <h1>Konami Code</h1>
+    <div class="blink-me">
+      <p>Enter the Konami Code, noOb.</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="js/jquery.js"></script>
+    <script>
+    "use strict";
+$(document).ready(function (){
+  $(document).keyup(function(event){
+    console.log(event.keyCode);
+  });
+})
 
 </script>
 </body>
