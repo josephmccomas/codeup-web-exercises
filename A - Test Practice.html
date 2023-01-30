@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  (function (){
+  //   1. Write a function called commasToHyphens that replaces commas in a given string paramether with hyphens.  The function should return the new string
+    function commasToHyphens(str) {
+      return str.replaceAll(",", "-");
+    }
+
+    console.log(commasToHyphens("hello,world"));
+    // outputs "hello-world"
+
+  //   2. Write a function called sumOfAges that returns the sum of a given array of peoples' ages
+
+
+    const people = [
+      {
+        name: "Bob",
+        age: 10
+      },
+      {
+        name: "sue",
+        age: 22
+      },
+      {
+        name: "Lou",
+        age: 41
+      }
+    ]
+
+    function sumOfAges(input){
+      let sum = 0;
+      for (let i = 0; i < input.length; i++){
+        sum += input[i].age;
+      }
+      return sum;
+    }
+    console.log(sumOfAges(people));
+  })();
+</script>
+</body>
+</html>
