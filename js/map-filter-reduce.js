@@ -77,6 +77,7 @@ console.log(instructors);
 
 //Use .reduce to get the unique list of languages from the list of users.
 
-// const langList = users.reduce(function (mySet, user) {
-//     user.languages.forEach(function ())
-// })
+const langList = users.reduce(function (mySet, user) {
+    return mySet + user.languages;
+}, []);
+console.log(langList);
